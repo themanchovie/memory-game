@@ -60,7 +60,7 @@ function shuffle(array) {
 
 
 // Grab the div with an id of container
-const container = document.getElementsByClassName("container");
+const container = document.getElementByID("container");
 
 // Create a section with a class of deck
 const shuffledDeck = document.createElement("ul");
