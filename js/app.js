@@ -1,7 +1,39 @@
 /*
  * Create a list that holds all of your cards
  */
-
+ const array = [{
+     // 'name': 'diamond',
+     'img': 'fa fa-diamond',
+   },
+   {
+     // 'name': 'plane',
+     'img': 'fa fa-paper-plane-o',
+   },
+   {
+     // 'name': 'anchor',
+     'img': 'fa fa-anchor',
+   },
+   {
+     // 'name': 'bolt',
+     'img': 'fa fa-bolt',
+   },
+   {
+     // 'name': 'cube',
+     'img': 'fa fa-cube',
+   },
+   {
+     // 'name': 'leaf',
+     'img': 'fa fa-leaf',
+   },
+   {
+     // 'name': 'bicycle',
+     'img': 'fa fa-bicycle',
+   },
+   {
+     // 'name': 'bomb',
+     'img': 'fa fa-bomb',
+   },
+ ];
 
 /*
  * Display the cards on the page
@@ -24,6 +56,42 @@ function shuffle(array) {
 
     return array;
 }
+
+
+
+// Grab the div with an id of container
+const container = document.getElementsByClassName("container");
+
+// Create a section with a class of deck
+const shuffledDeck = document.createElement("ul");
+shuffledDeck.setAttribute("class", "deck");
+
+// Append the deck section to the container div
+container.appendChild(shuffledDeck);
+
+
+
+
+// For each item in the array...
+array.forEach(item => {
+  // Create a li
+  const card = document.createElement('li');
+  card.setAttribute("class", "deck");
+  // // Apply a card class to that div
+  // card.classList.add('card');
+
+// STILL NEED TO ADD IMAGE ELEMENT (<i class = "fa fa-.name"><i>)
+  // // Set the data-name attribute of the div to the array name
+  // card.dataset.name = item.name;
+  //
+  // // Apply the background image of the div to the cardsArray image
+  // card.class = `url(${item.img})`;
+
+  // Append the div to the grid section
+  shuffledDeck.appendChild(card);
+});
+
+
 
 
 /*
