@@ -79,7 +79,7 @@ array.forEach(item => {
   makeCard.setAttribute("class", "card open show");
   // // Apply a card class to that div
   // card.classList.add('card');
-  makeCard.textContent = "<i class="+item.img+"></i>"
+  makeCard.innerHTML = <i class="${item.img}"></i>
 // STILL NEED TO ADD IMAGE ELEMENT (<i class = "fa fa-.name"><i>)
   // // Set the data-name attribute of the div to the array name
   // card.dataset.name = item.name;
