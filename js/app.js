@@ -60,7 +60,7 @@ function shuffle(array) {
 
 
 // Grab the div with an id of container
-const container = document.getElementByID("container");
+const container = document.getElementById("container");
 
 // Create a section with a class of deck
 const shuffledDeck = document.createElement("ul");
@@ -75,11 +75,11 @@ container.appendChild(shuffledDeck);
 // For each item in the array...
 array.forEach(item => {
   // Create a li
-  const card = document.createElement('li');
-  card.setAttribute("class", "deck");
+  const makeCard = document.createElement('li');
+  makeCard.setAttribute("class", "card open show");
   // // Apply a card class to that div
   // card.classList.add('card');
-
+  makeCard.textContent = "<i class="+item.img+"></i>"
 // STILL NEED TO ADD IMAGE ELEMENT (<i class = "fa fa-.name"><i>)
   // // Set the data-name attribute of the div to the array name
   // card.dataset.name = item.name;
@@ -88,11 +88,17 @@ array.forEach(item => {
   // card.class = `url(${item.img})`;
 
   // Append the div to the grid section
-  shuffledDeck.appendChild(card);
+  shuffledDeck.appendChild(makeCard);
 });
 
 
 
+// // Duplicate array to create a match for each card
+// let gameGrid = shuffledDeck.concat(shuffledDeck);
+//
+// // For each item in the gameGrid array...
+// gameGrid.forEach(item => {
+//   // ...
 
 /*
  * set up the event listener for a card. If a card is clicked:
